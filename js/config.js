@@ -13,8 +13,11 @@ window.SITE_CONFIG = {
   githubApkDownloadUrl:
     "https://github.com/linkradar-app/LinkRadar_public/releases/download/app/LinkRadar.apk",
 
+  /** User support, privacy requests, and in-app legal contact */
   supportEmail: "linkradar.app@gmail.com",
   privacyEmail: "linkradar.app@gmail.com",
+  /** Google Play Console “Developer contact” only — not for end-user support */
+  developerEmail: "vibestudio-res@gmail.com",
   companyName: "RES Solutions Ltd.",
 
   playStoreUrl: "",

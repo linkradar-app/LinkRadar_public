@@ -21,6 +21,11 @@
     el.textContent = email;
     if (el.tagName === "A") el.href = "mailto:" + email;
   });
+  document.querySelectorAll("[data-developer-email]").forEach((el) => {
+    const email = c.developerEmail || "";
+    el.textContent = email;
+    if (el.tagName === "A") el.href = "mailto:" + email;
+  });
   document.querySelectorAll("[data-privacy-updated]").forEach((el) => {
     el.textContent = c.privacyUpdated || "";
   });

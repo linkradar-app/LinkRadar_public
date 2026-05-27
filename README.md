@@ -48,4 +48,9 @@ Release uses the debug keystore until `key.properties` exists (`docs/RELEASE_BUI
 | Privacy policy | `https://linkradar-app.github.io/LinkRadar_public/privacy.html` |
 | Terms (if requested) | `https://linkradar-app.github.io/LinkRadar_public/terms.html` |
 
-Canonical edits: update `mobile/assets/legal/privacy.md` and `terms.md`, then mirror to `website/privacy.html` and `terms.html`. Contact email and company name: `js/config.js`.
+Canonical edits: update `mobile/assets/legal/privacy.md` and `terms.md`, then mirror to `website/privacy.html` and `terms.html`. Emails and company name: `js/config.js`.
+
+| Field | Email |
+|-------|--------|
+| `supportEmail` / `privacyEmail` | `linkradar.app@gmail.com` — users, legal, GDPR |
+| `developerEmail` | `vibestudio-res@gmail.com` — **Google Play Console developer contact only** |
