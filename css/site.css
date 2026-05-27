@@ -374,6 +374,45 @@ a:hover {
   margin-top: 1.5rem;
 }
 
+/* Rendered from assets/legal/*.md (same as mobile app) */
+.legal-markdown h1 {
+  font-size: 1.75rem;
+  margin-top: 0;
+}
+
+.legal-markdown h2 {
+  font-size: 1.15rem;
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.legal-markdown h3 {
+  font-size: 1rem;
+  margin-top: 1.25rem;
+}
+
+.legal-markdown p,
+.legal-markdown li {
+  color: var(--text);
+}
+
+.legal-markdown ul {
+  padding-left: 1.25rem;
+}
+
+.legal-markdown li {
+  margin-bottom: 0.35rem;
+}
+
+.legal-markdown a {
+  color: var(--primary);
+}
+
+.legal-markdown code {
+  font-size: 0.9em;
+  color: var(--muted);
+}
+
 .store-buttons {
   display: flex;
   flex-wrap: wrap;

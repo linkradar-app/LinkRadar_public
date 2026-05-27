@@ -8,7 +8,6 @@
   <script src="js/config.js"></script>
 </head>
 <body>
-  <!-- Canonical source: mobile/assets/legal/terms.md — keep in sync -->
   <header class="site-header">
     <div class="container inner">
       <a class="logo" href="index.html">
@@ -26,58 +25,17 @@
   </header>
 
   <main class="container legal legal-body">
-    <h1>Terms of Service</h1>
-    <p class="updated">Last updated: <span data-terms-updated></span></p>
-    <p>Welcome to LinkRadar. By using our mobile application, you agree to these Terms and our <a href="privacy.html">Privacy Policy</a>.</p>
-
-    <h2>1. Acceptance</h2>
-    <p>If you do not agree, you may not use the service.</p>
-
-    <h2>2. Eligibility</h2>
-    <ul>
-      <li>At least 18 years old to register and use LinkRadar</li>
-      <li>Valid email for sign-in</li>
-      <li>Accurate information including a mandatory profile photo</li>
-    </ul>
-
-    <h2>3. User Conduct</h2>
-    <p>You agree not to harass, stalk, create manipulative accounts, post illegal content, or bypass zone-based privacy protections.</p>
-
-    <h2>4. Likes and Reveal</h2>
-    <ul>
-      <li>Likes remain active for up to 30 days; non-mutual outgoing likes may be removed before they become mutual</li>
-      <li>Identity is shared only if both parties explicitly confirm reveal</li>
-      <li>Contact exchange after bilateral reveal is your choice; we are not responsible for contact outside the app</li>
-      <li>Reveal chat is ephemeral (text and photos disappear shortly after open; videos are one-time view). Either user may delete the chat room for both participants</li>
-    </ul>
-
-    <h2>5. Purchases and Subscriptions</h2>
-    <ul>
-      <li>Optional in-app purchases (Boost, Plus, Monthly) are processed by Stripe; prices are shown before payment</li>
-      <li>Packages grant likes, reveal unlocks, and/or radar access as described in the app</li>
-      <li>Refunds may be handled through Google Play (when listed), Stripe, or by contacting us where applicable law allows</li>
-      <li>We may change packages, prices, or quotas with notice where required</li>
-    </ul>
-
-    <h2>6. Referral Program</h2>
-    <p>Referral codes and rewards follow rules shown in the app and may change. Abuse may result in forfeiture of rewards and account action.</p>
-
-    <h2>7. Account Termination</h2>
-    <p>We may suspend accounts for violations. You may delete your account in Settings at any time.</p>
-
-    <h2>8. Limitation of Liability</h2>
-    <p>The service is provided &ldquo;as is&rdquo;. We are not liable for damages from use of the app or interactions with users discovered through the radar.</p>
-
-    <h2>9. Changes</h2>
-    <p>We may update these terms and notify you where appropriate. Continued use means acceptance. Current version: Settings → Legal and this page.</p>
-
-    <h2>10. Governing Law</h2>
-    <p>Laws of the jurisdiction where the service provider is registered, without regard to conflict-of-law principles.</p>
-
-    <h2>11. Contact</h2>
-    <p><a data-support-email href="mailto:linkradar.app@gmail.com">linkradar.app@gmail.com</a></p>
-
-    <p class="install-note">This page matches <strong>Settings → Legal → Terms of Service</strong> in the LinkRadar app.</p>
+    <article
+      id="legal-markdown"
+      class="legal-markdown"
+      data-legal-src="assets/legal/terms.md"
+    >
+      <p class="coming-soon">Loading terms of service…</p>
+    </article>
+    <p class="install-note">
+      Full text — same file as <strong>Settings → Legal → Terms of Service</strong> in the app
+      (<code>assets/legal/terms.md</code>).
+    </p>
   </main>
 
   <footer class="site-footer">
@@ -91,6 +49,8 @@
       <p>© <span data-year></span> <span data-company-name>RES Solutions Ltd.</span></p>
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/marked@15.0.7/marked.min.js" crossorigin="anonymous"></script>
+  <script src="js/legal-markdown.js"></script>
   <script src="js/site.js"></script>
 </body>
 </html>

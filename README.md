@@ -48,7 +48,13 @@ Release uses the debug keystore until `key.properties` exists (`docs/RELEASE_BUI
 | Privacy policy | `https://linkradar-app.github.io/LinkRadar_public/privacy.html` |
 | Terms (if requested) | `https://linkradar-app.github.io/LinkRadar_public/terms.html` |
 
-Canonical edits: update `mobile/assets/legal/privacy.md` and `terms.md`, then mirror to `website/privacy.html` and `terms.html`. Emails and company name: `js/config.js`.
+**Legal sync:** edit `mobile/assets/legal/privacy.md` and `terms.md`, then copy to `website/assets/legal/` (site loads the same `.md` files as the app):
+
+```powershell
+Copy-Item mobile/assets/legal/*.md website/assets/legal/ -Force
+```
+
+`privacy.html` / `terms.html` only render that markdown. Emails: `js/config.js`.
 
 | Field | Email |
 |-------|--------|
