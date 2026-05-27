@@ -9,10 +9,9 @@ window.SITE_CONFIG = {
     "LinkRadar helps you show interest anonymously. Your identity is revealed only when you both like each other and choose to reveal — so rejection never exposes who you are.",
   siteUrl: "https://linkradar-app.github.io/LinkRadar_public/",
 
-  /** App source (private) + public APK release for website download */
-  githubRepoUrl: "https://github.com/linkradar-app/Linkradar",
+  /** Single public APK (LinkRadar_public) — no releases list linked from the site */
   githubApkDownloadUrl:
-    "https://github.com/linkradar-app/LinkRadar_public/releases/download/v1.0.0-debug/LinkRadar-debug.apk",
+    "https://github.com/linkradar-app/LinkRadar_public/releases/download/app/LinkRadar.apk",
 
   supportEmail: "linkradar.app@gmail.com",
   privacyEmail: "linkradar.app@gmail.com",

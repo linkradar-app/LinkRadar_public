@@ -112,17 +112,11 @@
   const githubSection = document.getElementById("github-download");
   if (githubSection) {
     const apkUrl = c.githubApkDownloadUrl || "";
-    const repoUrl = c.githubRepoUrl || "";
     if (apkUrl) {
       githubSection.innerHTML =
         '<a class="btn btn-download-apk" href="' +
         apkUrl +
-        '" download>Download APK for Android</a>' +
-        (repoUrl
-          ? '<p class="github-releases-link"><a href="' +
-            repoUrl +
-            '/releases" target="_blank" rel="noopener">All releases on GitHub</a></p>'
-          : "");
+        '" download>Download APK for Android</a>';
     } else {
       githubSection.innerHTML =
         '<p class="coming-soon">APK link not configured yet — set <code>githubApkDownloadUrl</code> in <code>js/config.js</code>.</p>';
