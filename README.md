@@ -38,5 +38,14 @@ Release uses the debug keystore until `key.properties` exists (`docs/RELEASE_BUI
 
 - `index.html` — Home
 - `download.html` — GitHub APK + Google Play (when listed)
-- `privacy.html` / `terms.html` — Legal
+- `privacy.html` / `terms.html` — **Full** legal text (same as `mobile/assets/legal/*.md`) — use for **Google Play** privacy URL
 - `support.html` — FAQ + contact
+
+### Google Play Console URLs
+
+| Field | URL |
+|-------|-----|
+| Privacy policy | `https://linkradar-app.github.io/LinkRadar_public/privacy.html` |
+| Terms (if requested) | `https://linkradar-app.github.io/LinkRadar_public/terms.html` |
+
+Canonical edits: update `mobile/assets/legal/privacy.md` and `terms.md`, then mirror to `website/privacy.html` and `terms.html`. Contact email and company name: `js/config.js`.

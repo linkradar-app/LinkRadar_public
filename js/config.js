@@ -15,7 +15,7 @@ window.SITE_CONFIG = {
 
   supportEmail: "linkradar.app@gmail.com",
   privacyEmail: "linkradar.app@gmail.com",
-  companyName: "RES SOLUTIONS LTD.",
+  companyName: "RES Solutions Ltd.",
 
   playStoreUrl: "",
   appStoreUrl: "",
@@ -32,8 +32,8 @@ window.SITE_CONFIG = {
   faviconUrl: "assets/favicon.png",
 
   year: 2026,
-  privacyUpdated: "2026-05-19",
-  termsUpdated: "2026-05-07",
+  privacyUpdated: "2026-05-27",
+  termsUpdated: "2026-05-27",
 
   locationDisclaimer:
     "LinkRadar uses your device location only to assign a proximity zone (10m, 50m, or 100m). We do not store GPS coordinates on our servers. Meet people responsibly — the app is not a substitute for your own judgment about safety.",

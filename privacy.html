@@ -8,6 +8,7 @@
   <script src="js/config.js"></script>
 </head>
 <body>
+  <!-- Canonical source: mobile/assets/legal/privacy.md — keep in sync -->
   <header class="site-header">
     <div class="container inner">
       <a class="logo" href="index.html">
@@ -27,51 +28,111 @@
   <main class="container legal legal-body">
     <h1>Privacy Policy</h1>
     <p class="updated">Last updated: <span data-privacy-updated></span></p>
-    <p>Data Controller: <span data-company-name>RES Solutions Ltd.</span> (“we”, “us”, “our”), Bulgaria, European Union.<br />
-    Privacy contact: <a data-privacy-email href="mailto:vibestudio-res@gmail.com">vibestudio-res@gmail.com</a></p>
+    <p>Data Controller: <span data-company-name>RES Solutions Ltd.</span> (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;), Bulgaria, European Union.<br />
+    Privacy contact: <a data-privacy-email href="mailto:linkradar.app@gmail.com">linkradar.app@gmail.com</a></p>
 
     <p>This Privacy Policy explains how we process personal data when you use the LinkRadar mobile application and related services. LinkRadar is built on privacy by design: we minimize what we collect, we do not store your precise GPS coordinates on our servers, and we only reveal your identity to another user after a mutual match and symmetric reveal by both parties.</p>
 
+    <p>Notice at collection: This policy is shown during registration and before you continue using the app. By creating an account, you confirm you have read this policy. Where we rely on consent (for example location), you may withdraw it in device settings and by contacting us.</p>
+
     <h2>1. Personal Data We Collect</h2>
-    <p>We collect identifiers (email, username, user ID, push token), profile photo URL, age group, zone buckets (10m / 50m / 100m — not lat/long), likes, matches, reveal status, ephemeral reveal chat, blocks, and security-related logs. We do not sell personal information.</p>
-
-    <h2>2. Location and Proximity</h2>
-    <p>On your device, the OS location services estimate proximity and assign a zone. On our servers we store zone buckets and timestamps — not precise GPS coordinates.</p>
-
-    <h2>3. How We Use Your Data</h2>
+    <p>We group data using the categories below. For California residents, these align with CCPA/CPRA categories.</p>
     <ul>
-      <li>Provide radar, likes, mutual matches, symmetric reveal, and optional reveal chat</li>
-      <li>Send push notifications (e.g. anonymous “someone liked you” without username in the alert)</li>
-      <li>GDPR export and account deletion in-app</li>
-      <li>Prevent spam, fraud, and abuse</li>
+      <li><strong>Identifiers:</strong> email (authentication), username, internal user ID, device push token (FCM). Stored on our servers: Yes.</li>
+      <li><strong>Personal information:</strong> profile photo URL, age group (adult — registration is limited to users aged 18 and older). Stored on our servers: Yes.</li>
+      <li><strong>Geolocation data:</strong> zone buckets only (10&nbsp;m, 50&nbsp;m, or 100&nbsp;m), lastZone, zone at time of like/match — not latitude/longitude. Stored on our servers: Yes (approximate zones only).</li>
+      <li><strong>Internet / app activity:</strong> likes sent/received, mutual matches, reveal status, contact details you choose to share after bilateral reveal, ephemeral reveal chat messages (text, photos, video), blocks, subscription and purchase records, referral usage, audit events related to your account. Stored on our servers: Yes.</li>
+      <li><strong>Payment information:</strong> we do not store full card numbers. Stripe processes payments; we store package purchased, payment status, and related metadata needed to deliver quotas and subscription access.</li>
+      <li><strong>Inferences:</strong> fraud or risk signals where applicable (for example rate limits). Stored on our servers: Limited, as needed for security.</li>
     </ul>
 
-    <h2>4. Legal Bases (GDPR)</h2>
-    <p>Contract for account and core features; consent for location on device and push; legitimate interests for security where applicable.</p>
+    <h3>1.1 Account information</h3>
+    <ul>
+      <li>Email address — passwordless sign-in via Supabase (OTP or magic link). We do not store passwords.</li>
+      <li>Username — unique, chosen at registration; immutable after registration.</li>
+      <li>Profile photo — required at registration; stored via Supabase Storage; URL stored in our database.</li>
+      <li>Age — you must be at least 18 years old to register. We store age group as adult only.</li>
+    </ul>
+    <p>Legal basis (GDPR): Performance of a contract (Art. 6(1)(b) GDPR) — necessary to create and operate your account.</p>
 
-    <h2>5. International Transfers</h2>
-    <p>We use Supabase and Google Firebase Cloud Messaging. Providers may process data outside the EEA with appropriate safeguards.</p>
+    <h3>1.2 Location and proximity</h3>
+    <p>On your device: The app uses the operating system&rsquo;s location services only on the device to estimate proximity and assign you to a zone of 10&nbsp;m, 50&nbsp;m, or 100&nbsp;m.</p>
+    <p>On our servers: We do not store your exact coordinates. We store lastZone, zoneDistance on likes and matches, and lastActive (not a map position).</p>
+    <p>After reveal: Other users see your identity and zone-based display — not a precise GPS pin.</p>
+    <p>Legal basis (GDPR): Consent (Art. 6(1)(a)) for location on device; contract (Art. 6(1)(b)) for zone buckets needed for the service.</p>
 
-    <h2>6. Data Retention</h2>
-    <p>Likes: up to 30 days unless part of a mutual flow. Account: until deletion or extended inactivity. Ephemeral chat: shortly after open (videos one-time view).</p>
+    <h3>1.3 Usage and social graph data</h3>
+    <p>Likes, mutual matches, reveal status, contact shares after bilateral reveal, ephemeral reveal chat, blocks, and related timestamps.</p>
 
-    <h2>7. Your Rights</h2>
-    <p>EEA/UK: access, rectify, erase, restrict, port, object, withdraw consent, complain to a supervisory authority (Bulgaria: CPDP — <a href="https://www.cpdp.bg" rel="noopener">cpdp.bg</a>).</p>
-    <p>California: know, delete, correct — we do not sell personal information. Contact <a data-privacy-email href="mailto:vibestudio-res@gmail.com">vibestudio-res@gmail.com</a> or use in-app Settings.</p>
+    <h3>1.4 Push notifications</h3>
+    <p>FCM push token stored to deliver alerts (likes, matches, reveals, chat alerts, system messages).</p>
 
-    <h2>8. Sharing</h2>
-    <p>Service providers (Supabase, Google/Firebase), payment providers when enabled, and authorities when required by law. Username and photo appear only after mutual bilateral reveal.</p>
+    <h3>1.5 Optional device lock (biometrics)</h3>
+    <p>If you enable biometric unlock in Settings, authentication uses your device&rsquo;s Face ID, fingerprint, or device PIN. We do not receive or store biometric data on our servers.</p>
 
-    <h2>9. Security</h2>
+    <h3>1.6 Purchases and referrals</h3>
+    <p>Subscription and quota state, package purchases via Stripe, and referral codes/rewards under program rules shown in the app.</p>
+
+    <h3>1.7 Data we do not collect</h3>
+    <ul>
+      <li>Precise GPS coordinates in our database</li>
+      <li>Passwords (passwordless auth only)</li>
+      <li>Biometric templates on our servers</li>
+      <li>QR-based discovery (not offered)</li>
+      <li>Sale of personal information to data brokers</li>
+    </ul>
+
+    <h2>2. How We Use Your Data</h2>
+    <ul>
+      <li>Provide radar, likes, mutual matches, symmetric reveal, contact exchange, and optional reveal chat</li>
+      <li>Operate in-app purchases (Boost, Plus, Monthly) and free-tier quotas via Stripe</li>
+      <li>Run the referral program where enabled</li>
+      <li>Send push and in-app notifications</li>
+      <li>GDPR export and account deletion in-app</li>
+      <li>Prevent spam, fraud, and abuse</li>
+      <li>Comply with law and enforce our Terms</li>
+    </ul>
+    <p>We do not use your data for cross-context behavioral advertising. We do not sell personal information under the CCPA/CPRA.</p>
+
+    <h2>3. Legal Bases Summary (GDPR)</h2>
+    <p>Contract for account and core features; consent for location, notifications, and optional biometrics; legitimate interests for security where applicable. You may withdraw consent in device settings.</p>
+
+    <h2>4. International Data Transfers</h2>
+    <p>We use Supabase, Google Firebase Cloud Messaging, and Stripe. Providers may process data outside the EEA with appropriate safeguards (for example Standard Contractual Clauses).</p>
+
+    <h2>5. Data Retention</h2>
+    <ul>
+      <li>Likes — up to 30 days unless part of a mutual match flow</li>
+      <li>Account — until deletion or extended inactivity (up to 24 months, with notice where required)</li>
+      <li>Ephemeral reveal chat — text and photos shortly after open; videos after one-time view</li>
+      <li>Payment records — as required by law, then deleted or anonymized</li>
+      <li>Security logs — limited duration as needed</li>
+    </ul>
+
+    <h2>6. Your Rights</h2>
+    <h3>6.1 GDPR (EEA / UK)</h3>
+    <p>Access, rectification, erasure, restriction, portability, object, withdraw consent, and complain to a supervisory authority. Bulgaria: <a href="https://www.cpdp.bg" rel="noopener">CPDP (cpdp.bg)</a>. We respond within one month where applicable.</p>
+    <h3>6.2 California (CCPA / CPRA)</h3>
+    <p>Know, delete, correct; we do not sell personal information. Contact <a data-privacy-email href="mailto:linkradar.app@gmail.com">linkradar.app@gmail.com</a> or use in-app Settings (export / delete).</p>
+
+    <h2>7. Data Sharing and Disclosure</h2>
+    <p>We do not sell your personal information. Service providers: Supabase, Google (Firebase), Stripe (payments you initiate), and authorities when required by law. Username and photo appear only after mutual bilateral reveal.</p>
+
+    <h2>8. Security</h2>
     <p>TLS, access controls, row-level security, and authenticated APIs. No system is fully secure.</p>
 
-    <h2>10. Children</h2>
-    <p>Not directed at children under 13. Contact us if you believe we collected data from a child without appropriate consent.</p>
+    <h2>9. Children</h2>
+    <p>LinkRadar is not directed at children under 18. Registration is limited to adults aged 18 and older.</p>
 
-    <h2>11. Changes</h2>
-    <p>We may update this policy and change the “Last Updated” date. We will notify you in the app or by email where required.</p>
+    <h2>10. Changes</h2>
+    <p>We may update this policy and change the &ldquo;Last updated&rdquo; date on this page and in the app, with notice where required.</p>
 
-    <p><strong>Full policy in app:</strong> Settings → Legal. This page summarizes the same policy; the in-app version may be updated first.</p>
+    <h2>11. Contact Us</h2>
+    <p><span data-company-name>RES Solutions Ltd.</span><br />
+    Email: <a data-privacy-email href="mailto:linkradar.app@gmail.com">linkradar.app@gmail.com</a><br />
+    For GDPR/CCPA requests, include &ldquo;Privacy Request&rdquo; in the subject and your account email.</p>
+
+    <p class="install-note">This page is the same policy as <strong>Settings → Legal → Privacy Policy</strong> in the LinkRadar app. Use this URL for Google Play and other store listings.</p>
   </main>
 
   <footer class="site-footer">
