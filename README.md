@@ -24,7 +24,15 @@ python -m http.server 8080
 1. Edit `js/config.js` if URLs change.
 2. Push contents to **LinkRadar_public** (`main`).
 3. In that repo: **Settings → Pages → Source: GitHub Actions**, then re-run deploy if needed.
-4. **One public APK only:** update asset on tag `app` in **LinkRadar_public** (Releases). Do not link a releases list from the site. Private app code stays in **Linkradar**.
+4. **One public APK only** (tag `app` on **LinkRadar_public**): upload **release** arm64 APK as `LinkRadar.apk`:
+
+```powershell
+cd mobile
+flutter build apk --release --split-per-abi
+# mobile/build/app/outputs/flutter-apk/app-arm64-v8a-release.apk → GitHub release asset
+```
+
+Release uses the debug keystore until `key.properties` exists (`docs/RELEASE_BUILD.md`). Do not link a releases list from the site.
 
 ## Pages
 
